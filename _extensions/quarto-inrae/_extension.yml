@@ -1,0 +1,8 @@
+title: Template INRAE
+author: David Carayon
+version: 0.0.1
+contributes:
+  revealjs:
+	  footer: |
+      Copyright 2022 (c) INRAE, Inc.
+
