@@ -1,0 +1,51 @@
+\makeatletter
+\let\inserttitle\@title
+\makeatother
+\makeatletter
+\let\insertauthor\@author
+\makeatother
+\makeatletter
+\let\insertdate\@date
+\makeatother
+
+\newgeometry{left=2cm,bottom=0.1cm}
+
+\vspace*{-4.5cm}
+
+\makebox[0pt][l]{%
+\raisebox{-\totalheight}[0pt][0pt]{%
+\hspace{-2.1cm}
+\includegraphics[width=220mm]{_extensions/quarto-inrae/ressources/photo.png}}}%
+
+\vspace*{12.15cm}
+
+\hspace{-2.7cm}
+\includegraphics[width=10cm]{_extension/quarto-inrae/ressourcess/cartouche}\par
+
+\hspace{12cm}
+\includegraphics[width=10cm]{_extensions/quarto-inrae/ressources/bloc-etat}\par
+
+\vspace*{-2cm}
+
+\hspace{-2.8cm}
+\includegraphics[width=8cm]{_extensions/quarto-inrae/ressources/sigle-inrae}
+
+\vspace*{1cm}
+
+\hspace{-1cm}
+\setlength{\parindent}{0cm}
+\includegraphics[width=0.5cm]{_extensions/quarto-inrae/ressources/fleche-titre}\hspace{0.3cm}\textcolor{inrae}{\sffamily\Huge\bfseries \inserttitle}\par\bigskip
+
+\hspace{-1cm}\textcolor{inrae}{\sffamily \insertdate}\par
+
+\vspace*{1cm}
+
+\hspace{-1cm}\textcolor{inraefonce}{\sffamily \insertauthor}\par
+
+\hspace{-1cm}\textcolor{inraefonce}{\sffamily
+Document distribué sous licence CC-BY}\par
+
+\hspace{-1cm}\includegraphics[width=1cm]{_extensions/quarto-inrae/ressources/cc-by} \href{https://creativecommons.org/licenses/by/4.0/fr/legalcode}{https://creativecommons.org/licenses/by/4.0/fr/legalcode}
+
+\restoregeometry
+

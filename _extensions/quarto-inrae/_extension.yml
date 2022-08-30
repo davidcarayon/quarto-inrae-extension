@@ -2,7 +2,55 @@ title: Template INRAE
 author: David Carayon
 version: 0.0.1
 contributes:
-  revealjs:
-	  footer: |
-      Copyright 2022 (c) INRAE, Inc.
-
+  formats:
+    html:
+      code-overflow: wrap
+      theme: lumen
+      toc-title: "Sommaire"
+      number-sections: true
+      highlight-style: github
+      cover-image: ressources/bloc-etat
+      css: ressources/styles.css
+    pdf:
+      documentclass: scrreprt
+      sansfont: Raleway
+      mainfont: Avenir Next LT Pro
+      toc-title: "Sommaire"
+      include-before-body: ressources/page_de_garde.tex
+      include-in-header: ressources/preamble.tex
+      include-after-body: ressources/lastPage.tex
+      geometry:
+        - top=25mm
+        - left=25mm
+        - right=25mm
+        - bottom=25mm
+    docx:
+      reference-doc: ressources/template.docx
+      toc-title: "Sommaire"
+    revealjs:
+      title-slide-attributes:
+        data-background-image: ressources/sigle-inrae.png
+        data-background-size: 40%
+        data-background-position: left
+        data-background-opacity: "0.5"
+      logo: ressources/bloc-etat.png
+      footer: "Pied de page"
+      transition: fade
+      slide-number: "c/t"
+      auto-stretch: false
+      self-contained: true
+      center-title-slide: true
+      theme: [ressources/reveal_inrae.scss]
+      plugins:
+      - PdfExport
+    beamer:
+      sansfont: Avenir Next LT Pro
+      include-in-header: ressources/beamercolorthemeinrae.sty
+      aspectratio: 169
+      keep-tex: true
+      toc: true
+      toc-title: "Sommaire"
+      header-includes: \logo{\includegraphics[width=2cm]{_extensions/quarto-inrae/ressources/bloc-etat-white-bg.png}}
+    pptx:
+      reference-doc: ressources/template.pptx
+      toc: true
