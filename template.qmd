@@ -3,7 +3,7 @@ title: "Titre de la présentation"
 subtitle: "Sous-titre de la présentation"
 author: "Auteur de la présentation"
 date: "Lieu | Date"
-format: quarto-inrae-revealjs
+format: inrae-revealjs
 ---
 
 ## Quarto
