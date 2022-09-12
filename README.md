@@ -12,7 +12,7 @@ quarto use template davidcarayon/quarto-inrae-extension
 
 ## Installation for an existing document
 
-You may also use this format with an existing Quarto project or document to download the `_extensions/` folder.
+You may also use this format with an existing Quarto project or document to download the `_extensions` folder.
 
 ```bash
 quarto install extension davidcarayon/quarto-inrae-extension
