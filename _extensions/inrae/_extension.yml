@@ -50,7 +50,7 @@ contributes:
       keep-tex: true
       toc: true
       toc-title: "Sommaire"
-      header-includes: \logo{\includegraphics[width=2cm]{_extensions/quarto-inrae/ressources/bloc-etat-white-bg.png}}
+      header-includes: \logo{\includegraphics[width=2cm]{_extensions/inrae/ressources/bloc-etat-white-bg.png}}
     pptx:
       reference-doc: ressources/template.pptx
       toc: true
