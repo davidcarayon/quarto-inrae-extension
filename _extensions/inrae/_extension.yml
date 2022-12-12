@@ -48,9 +48,6 @@ contributes:
       include-in-header: ressources/beamercolorthemeinrae.sty
       aspectratio: 169
       keep-tex: true
-      toc: true
-      toc-title: "Sommaire"
-      header-includes: \logo{\includegraphics[width=2cm]{_extensions/inrae/ressources/bloc-etat-white-bg.png}}
     pptx:
       reference-doc: ressources/template.pptx
       toc: true
