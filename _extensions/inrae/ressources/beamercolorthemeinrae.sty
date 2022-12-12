@@ -1,5 +1,11 @@
 % Template issu des travaux d'E. Quinton (INRAE)
 
+\usepackage{scrextend}
+
+\RequirePackage{lastpage,graphicx,tikz,setspace}
+\usetikzlibrary{positioning}
+
+
 % Based on Boadilla Style
 % definition des couleurs INRAE
 \definecolor{inrae}{RGB}{0,163,166} % inrae
@@ -32,7 +38,7 @@
  
 
 \useinnertheme[shadow]{rounded}
-\useoutertheme{infolines}
+\useoutertheme{default}
 
 
 \setbeamercolor{block title}{fg=white,bg=inraefonce}
@@ -70,6 +76,71 @@
 \usesubsubitemizeitemtemplate{%
     \tiny\raise1.5pt\hbox{\color{inrae}$\bigstar$}%
 }
+
+
+% Title slide and Footer template from https://forgemia.inra.fr/gauthier.quesnel/beamer-inrae/
+
+
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[xshift=3cm,yshift=-1cm] at (current page.west){%
+            \includegraphics[height=0.5\textheight]{_extensions/inrae/ressources/sigle-inrae.png}};
+    \end{tikzpicture}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[xshift=14.5cm,yshift=3cm] at (current page.west){%
+            \includegraphics[height=0.2\textheight]{_extensions/inrae/ressources/Logo_republique_francaise.png}};
+        \node[xshift=0cm,yshift=1cm] at (current page.south){%
+                \includegraphics[width=2cm]{_extensions/inrae/ressources/OL.png}};    
+            
+            
+    \end{tikzpicture}
+    \vspace{-2em}
+    \begin{addmargin}[.2em]{1em}
+      \begin{spacing}{.5}
+        {\usebeamerfont{title}{\usebeamercolor[fg]{title}\hbox{\color{inraemedium}$\bigblacktriangledown$}\textbf\inserttitle}}
+        \vskip 0.1em
+        \usebeamerfont{subtitle}\insertsubtitle
+      \end{spacing}
+    \end{addmargin}
+    \vspace{5em}
+    \begin{flushright}
+    \begin{spacing}{.8}
+        \hskip 25em{\usebeamercolor[fg]{title}\insertauthor}
+        \vskip 0.1em
+        \hskip 25em\insertinstitute
+        \vskip 0.1em
+    \end{spacing}
+    \hskip 25em\insertdate
+    \end{flushright}
+}
+
+\setbeamertemplate{footline}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \ifnum\thepage>1
+        \node[xshift=+1.5cm,yshift=0.6cm] at (current page.south west){%
+            \includegraphics[width=3cm]{_extensions/inrae/ressources/bas-gauche.png}};
+        \node[xshift=+8.25cm,yshift=0.4cm] at (current page.south west){%
+                \begin{beamercolorbox}[ht=3em,dp=1em,left]{}
+                    \hspace{8em}\usebeamercolor[fg]{title}\insertshortauthor
+                \end{beamercolorbox}};
+        \node[xshift=+8.25cm,yshift=0.7cm] at (current page.south west){%
+                \begin{beamercolorbox}[ht=3em,dp=1em,left]{}
+                    \hspace{8em}\usebeamercolor[fg]{title}\insertshorttitle
+                \end{beamercolorbox}};
+\node[xshift=6.5cm,yshift=0.6cm] at (current page.south east){%
+                \begin{beamercolorbox}[ht=3em,dp=1em,left]{}
+                    p.~\thepage\hspace{0.2em}/\hspace{0.2em}\pageref{LastPage}
+                \end{beamercolorbox}};
+                
+        \fi
+    \end{tikzpicture}
+}
+
+
+\setbeamertemplate{frametitle}{
+\vspace{+1em}
+\color{inrae}\textbf{\raise1pt\hbox{\color{inraemedium}$\blacktriangleright$}\hskip .3em \insertframetitle}}
+
 
 \mode
 <all>
