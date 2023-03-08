@@ -1,6 +1,7 @@
 title: Template INRAE
 author: David Carayon
 version: 0.0.1
+
 contributes:
   formats:
     html:
@@ -43,11 +44,11 @@ contributes:
       theme: [ressources/reveal_inrae.scss]
       plugins:
       - PdfExport
-    beamer:
+    beamer: 
       sansfont: Avenir Next LT Pro
       include-in-header: ressources/beamercolorthemeinrae.sty
       aspectratio: 169
-      keep-tex: true
+      keep-tex: false
     pptx:
       reference-doc: ressources/template.pptx
       toc: true

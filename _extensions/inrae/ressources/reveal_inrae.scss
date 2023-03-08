@@ -1,40 +1,76 @@
 /*-- scss:defaults --*/
 
+// Font import
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+// Color system
+$white:    #F5F6FA !default;
+$gray-100: #F4F4F4 !default;
+$gray-200: #E9E9E9 !default;
+$gray-300: #D3D3D3 !default;
+$gray-400: #C7C7C7 !default;
+$gray-500: #A6A6A6 !default;
+$gray-600: #909090 !default;
+$gray-700: #424242 !default;
+$gray-800: #373737 !default;
+$gray-900: #2C2C2C !default;
+$black:    #000 !default;
+$blue:    #4455FF !default;
+$indigo:  #6610f2 !default; 
+$purple:  #CC99CC !default;
+$pink:    #CC6699 !default;
+$red:     #FF5555 !default;
+$orange:  #FF9933 !default;
+$yellow:  #FFFF99 !default;
+$green:   #33CC99 !default;
+$teal:    #20c997 !default; 
+$cyan:    #99CCFF !default;
+$light-orange: #FFCC66 !default;
+$inrae-charte: #00a3a6 !default;
+$inrae-sombre: #275662 !default;
+
+$primary:       $orange !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+
+// Document parameters
+$font-family-sans-serif: "Open Sans", sans-serif !default;
 $body-bg: #fff;
-$body-color: #275662;
-$link-color: #008c8e;
-$presentation-heading-font: "Avenir Next LT Pro";
-$presentation-heading-color: #00a3a6;
+$body-color: $inrae-sombre;
+$link-color: $indigo;
+$presentation-heading-font: "Raleway", Impact, sans-serif;
+$presentation-heading-color: $inrae-charte;
 $presentation-heading-line-height: 1.2;
 $presentation-h1-font-size: 1.4em;
 
+
 /*-- scss:rules --*/
 
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
-}
 
+// Text Format
 .reveal .footer p {
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
  font-size: 1.2em;
  font-weight: bold;
 }
 
 .reveal .slide-number-a {
- color: #275662;
+ color: $inrae-sombre;
  font-size: 1.4em;
 }
 
 .reveal .slide-number-delimiter {
- color: #275662;
+ color: $inrae-sombre;
  font-size: 1.4em;
 }
 
 .reveal .slide-number-b {
- color: #275662;
+ color: $inrae-sombre;
  font-size: 1.4em;
 }
 
@@ -48,63 +84,56 @@ $presentation-h1-font-size: 1.4em;
     width: auto;
 }
 
-.author {
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 0.5em;
-  text-align: right;
-}
-
-.date {
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 0.5em;
-  text-align: right;
-}
-
-.subtitle {
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 0.5em;
-  text-align: right;
-}
-
 .reveal h1.title {
-  font-family: "Avenir Next LT Pro";
-  font-size: 1.8em;
+  font-family: "Raleway";
+  font-size: 1.2em;
   text-transform: uppercase;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* shadows */
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   padding-bottom: 1em;
+  text-align: right;
 }
 
 .reveal h1 {
-  font-family: "Avenir Next LT Pro";
+  font-family: "Raleway";
   font-size: 1.6em;
   text-align: center;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#FFF, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .reveal h2 {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* shadows */
-  background: -webkit-linear-gradient(#275662, #00a3a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: "Raleway";
   font-weight: bold;
 }
 
 .reveal p {
+  font-size: 0.7em;
+  color: $inrae-sombre;
+}
+
+.author {
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+.date {
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+.subtitle {
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+.callout-caption p{
   font-size: 0.8em;
-  color: #275662;
+}
+
+// Slides
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
 }
 
 .reveal .slides section>* { /* this is for left align */
@@ -117,4 +146,217 @@ $presentation-h1-font-size: 1.4em;
 }
 .col{
     flex: 1;
+}
+
+// References
+div.csl-bib-body {
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+// Tables
+.reveal table th, .reveal table td {
+  text-align: center;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+  font-size: 0.6em;
+}
+
+// Alternative styles
+.box1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: $body-color;
+  padding-left: 1cm;
+  padding-right: 0.5cm;
+  border-radius: 30px;
+}
+
+.box2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: $body-color;
+  font-size: 0.6em;
+  padding-left: 1cm;
+  padding-right: 0.5cm;
+  border-radius: 30px;
+}
+
+// Inverse style
+.inverse {
+  color: #f3f3f3;
+  h1, h2, h3, footer, p {
+    color: #f3f3f3;
+  }
+  
+  .slide-background-content {
+    background-color: #00a3a6;
+  }
+
+    .callout-caption {
+    color: $body-color;
+  }
+
+  pre {
+    background-color: #272822;
+  }
+
+  pre code {
+    background-color: #272822;
+    color: #d6d6d6;
+  }
+
+  pre.sourceCode code {
+      background-color: #2b2b2b;
+      padding: 6px 9px;
+      max-height: 500px;
+      white-space: pre
+  }
+
+  pre > code.sourceCode > span {
+    color: #f8f8f2;
+  }
+
+  code span {
+    color: #f8f8f2;
+  }
+
+  code.sourceCode > span {
+    color: #f8f8f2;
+  }
+
+  div.sourceCode,
+  div.sourceCode pre.sourceCode {
+    color: #f8f8f2;
+  }
+
+  code span.ot {
+    color: #ffa07a;
+  }
+
+  code span.at {
+    color: #ffd700;
+  }
+
+  code span.ss {
+    color: #abe338;
+  }
+
+  code span.an {
+    color: #d4d0ab;
+  }
+
+  code span.fu {
+    color: #ffd700;
+  }
+
+  code span.st {
+    color: #abe338;
+  }
+
+  code span.cf {
+    color: #ffa07a;
+  }
+
+  code span.op {
+    color: #00e0e0;
+  }
+
+  code span.er {
+    color: #dcc6e0;
+  }
+
+  code span.bn {
+    color: #dcc6e0;
+  }
+
+  code span.al {
+    color: #dcc6e0;
+  }
+
+  code span.va {
+    color: #f5ab35;
+  }
+
+  code span.bu {
+    color: #f5ab35;
+  }
+
+  code span.ex {
+    color: #ffd700;
+  }
+
+  code span.pp {
+    color: #dcc6e0;
+  }
+
+  code span.in {
+    color: #d4d0ab;
+  }
+
+  code span.vs {
+    color: #abe338;
+  }
+
+  code span.wa {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.do {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.im {
+    color: #f8f8f2;
+  }
+
+  code span.ch {
+    color: #abe338;
+  }
+
+  code span.dt {
+    color: #dcc6e0;
+  }
+
+  code span.fl {
+    color: #f5ab35;
+  }
+
+  code span.co {
+    color: #d4d0ab;
+  }
+
+  code span.cv {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.cn {
+    color: #ffa07a;
+  }
+
+  code span.sc {
+    color: #00e0e0;
+  }
+
+  code span.dv {
+    color: #dcc6e0;
+  }
+
+  code span.kw {
+    color: #ffa07a;
+  }
+}
+
+// Inverse slide title style
+.inverse-slide-title {
+  color: #f3f3f3;
+  h1, h2{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: $presentation-heading-color;
+    padding-left: 1cm;
+    border-radius: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
