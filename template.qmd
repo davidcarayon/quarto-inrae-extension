@@ -1,8 +1,16 @@
 ---
 title: "Titre de la présentation"
 subtitle: "Sous-titre de la présentation"
-author: "Auteur de la présentation"
-date: "Lieu | Date"
+author:
+  - name: "**Premier auteur**"
+    orcid: 0000-xxxx-xxxx-xxxx
+    email: prenom.nom@inrae.fr
+    url: https://lien-site.fr
+  - name: Second auteur
+    email: prenom.nom@inrae.fr
+    orcid: 0000-xxxx-xxxx-xxxx
+date: today
+date-format: long
 format: inrae-revealjs
 ---
 

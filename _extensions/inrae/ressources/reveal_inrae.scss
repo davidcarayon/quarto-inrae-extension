@@ -1,9 +1,4 @@
 /*-- scss:defaults --*/
-
-// Font import
-@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-
 // Color system
 $white:    #F5F6FA !default;
 $gray-100: #F4F4F4 !default;
@@ -40,11 +35,9 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 
 // Document parameters
-$font-family-sans-serif: "Open Sans", sans-serif !default;
 $body-bg: #fff;
 $body-color: $inrae-sombre;
 $link-color: $indigo;
-$presentation-heading-font: "Raleway", Impact, sans-serif;
 $presentation-heading-color: $inrae-charte;
 $presentation-heading-line-height: 1.2;
 $presentation-h1-font-size: 1.4em;
@@ -85,23 +78,22 @@ $presentation-h1-font-size: 1.4em;
 }
 
 .reveal h1.title {
-  font-family: "Raleway";
-  font-size: 1.2em;
-  text-transform: uppercase;
-  padding-bottom: 1em;
-  text-align: right;
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  background: -webkit-linear-gradient($inrae-sombre, $inrae-charte);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .reveal h1 {
-  font-family: "Raleway";
   font-size: 1.6em;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .reveal h2 {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* shadows */
-  font-family: "Raleway";
   font-weight: bold;
 }
 
@@ -112,17 +104,14 @@ $presentation-h1-font-size: 1.4em;
 
 .author {
   padding-bottom: 0.5em;
-  text-align: right;
 }
 
 .date {
   padding-bottom: 0.5em;
-  text-align: right;
 }
 
 .subtitle {
   padding-bottom: 0.5em;
-  text-align: right;
 }
 
 .callout-caption p{

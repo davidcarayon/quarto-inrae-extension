@@ -41,7 +41,7 @@ contributes:
       auto-stretch: false
       self-contained: true
       center-title-slide: true
-      theme: [ressources/reveal_inrae.scss]
+      theme: [default, ressources/reveal_inrae.scss]
       plugins:
       - PdfExport
     beamer: 
