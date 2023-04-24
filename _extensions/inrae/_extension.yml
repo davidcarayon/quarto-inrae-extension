@@ -11,7 +11,7 @@ contributes:
       number-sections: true
       highlight-style: github
       cover-image: ressources/bloc-etat
-      css: ressources/styles.css
+      css: ressources/html_doc_styles.css
     pdf:
       documentclass: scrreprt
       sansfont: Raleway
@@ -39,7 +39,6 @@ contributes:
       transition: fade
       slide-number: "c/t"
       auto-stretch: false
-      self-contained: true
       center-title-slide: true
       theme: [default, ressources/reveal_inrae.scss]
       plugins:
