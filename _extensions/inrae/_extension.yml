@@ -34,6 +34,8 @@ contributes:
         data-background-size: 40%
         data-background-position: left
         data-background-opacity: "0.5"
+        data-footer: ""
+      include-after-body: ressources/clean-title-slide.html
       logo: ressources/bloc-etat.png
       footer: "Pied de page"
       transition: fade
