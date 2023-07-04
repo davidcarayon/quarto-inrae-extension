@@ -18,3 +18,14 @@ You may also use this format with an existing Quarto project or document to down
 quarto install extension davidcarayon/quarto-inrae-extension
 ```
 
+## Title slide with `inrae-revealjs`
+
+The slide number and footer are hidden on the title slide.
+
+The title slide footer can be specified with the following syntax:
+
+```
+  inrae-revealjs:
+    title-slide-attributes:
+      data-footer: "<a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/2.0/88x31.png' /><br></a>This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>Creative Commons Attribution-ShareAlike 2.0 Generic License</a>."
+```
