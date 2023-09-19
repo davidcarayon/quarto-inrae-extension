@@ -47,24 +47,16 @@ $presentation-h1-font-size: 1.4em;
 
 
 // Text Format
-.reveal .footer p {
- font-size: 1.2em;
- font-weight: bold;
-}
-
 .reveal .slide-number-a {
  color: $inrae-sombre;
- font-size: 1.4em;
 }
 
 .reveal .slide-number-delimiter {
  color: $inrae-sombre;
- font-size: 1.4em;
 }
 
 .reveal .slide-number-b {
  color: $inrae-sombre;
- font-size: 1.4em;
 }
 
 .reveal img.slide-logo {
@@ -78,9 +70,6 @@ $presentation-h1-font-size: 1.4em;
 }
 
 .reveal h1.title {
-  font-size: 1.5em;
-  padding-bottom: 0.5em;
-  line-height: 1em;
   background: -webkit-linear-gradient($inrae-sombre, $inrae-charte);
   -webkit-background-clip: text;
   background-clip: text;
@@ -88,84 +77,32 @@ $presentation-h1-font-size: 1.4em;
 }
 
 .reveal h1 {
-  font-size: 1.6em;
   text-align: center;
 }
 
 .reveal h2 {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* shadows */
-  font-weight: bold;
 }
 
 .reveal p {
-  font-size: 0.7em;
   color: $inrae-sombre;
-}
-
-.author {
-  padding-bottom: 0.5em;
-}
-
-.date {
-  padding-bottom: 0.5em;
-}
-
-.subtitle {
-  padding-bottom: 0.5em;
-}
-
-.callout-caption p{
-  font-size: 0.8em;
 }
 
 // Slides
 
 .reveal .slide blockquote {
   border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
 }
-
-.reveal .slides section>* { /* this is for left align */
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-
-// References
-div.csl-bib-body {
-  font-size: 0.8em;
-  line-height: 1.5em;
-}
-
-// Tables
-.reveal table th, .reveal table td {
-  text-align: center;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid;
-  font-size: 0.6em;
-}
-
 // Alternative styles
 .box1 {
   background-color: rgba(255, 255, 255, 0.5);
   color: $body-color;
-  padding-left: 1cm;
-  padding-right: 0.5cm;
   border-radius: 30px;
 }
 
 .box2 {
   background-color: rgba(255, 255, 255, 0.5);
   color: $body-color;
-  font-size: 0.6em;
-  padding-left: 1cm;
-  padding-right: 0.5cm;
   border-radius: 30px;
 }
 
@@ -195,8 +132,6 @@ div.csl-bib-body {
 
   pre.sourceCode code {
       background-color: #2b2b2b;
-      padding: 6px 9px;
-      max-height: 500px;
       white-space: pre
   }
 
@@ -343,9 +278,7 @@ div.csl-bib-body {
   h1, h2{
     background-color: rgba(255, 255, 255, 0.7);
     color: $presentation-heading-color;
-    padding-left: 1cm;
     border-radius: 30px;
-    text-align: center;
     text-transform: uppercase;
   }
 }
