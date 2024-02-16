@@ -18,11 +18,29 @@ You may also use this format with an existing Quarto project or document to down
 quarto install extension davidcarayon/quarto-inrae-extension
 ```
 
-## Title slide with `inrae-revealjs`
+# Usage
 
-The slide number and footer are hidden on the title slide.
+## Documents
 
-The title slide footer can be specified with the following syntax:
+<!-- 3 caps side by side -->
+
+* inrae-typst (remplace pdf)
+* inrae-docx docx
+* inrae-html yaml bs
+
+## Slides
+
+<!-- 3 caps side by side -->
+
+* inrae-revealjs : scss
+* inrae-beamer (à remplacer par typst aussi ?) tex
+* inrae-pptx pptx 
+
+### Title slide with `inrae-revealjs`
+
+The slide number and footer are by default hidden on the title slide.
+
+The title slide footer can be specified using the following syntax:
 
 ```
   inrae-revealjs:

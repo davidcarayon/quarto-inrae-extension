@@ -1,6 +1,6 @@
 title: Template INRAE
 author: David Carayon
-version: 0.0.1
+version: 1.0.0
 
 contributes:
   formats:
@@ -10,46 +10,33 @@ contributes:
       toc-title: "Sommaire"
       number-sections: true
       highlight-style: github
-      cover-image: ressources/bloc-etat
-      css: ressources/html_doc_styles.css
-    pdf:
-      documentclass: scrreprt
-      sansfont: Raleway
-      mainfont: Avenir Next LT Pro
-      toc-title: "Sommaire"
-      include-before-body: ressources/page_de_garde.tex
-      include-in-header: ressources/preamble.tex
-      include-after-body: ressources/lastPage.tex
-      geometry:
-        - top=25mm
-        - left=25mm
-        - right=25mm
-        - bottom=25mm
-    docx:
-      reference-doc: ressources/template.docx
-      toc-title: "Sommaire"
+      cover-image: assets/bloc-etat.png
+      css: styles/html_doc_styles.css
     revealjs:
       title-slide-attributes:
-        data-background-image: ressources/sigle-inrae.png
+        data-background-image: assets/sigle-inrae.png
         data-background-size: 40%
         data-background-position: left
         data-background-opacity: "0.5"
         data-footer: ""
-      include-after-body: ressources/clean-title-slide.html
-      logo: ressources/bloc-etat.png
+      include-after-body: templates/clean-title-slide.html
+      logo: assets/bloc-etat.png
       footer: "Pied de page"
       transition: fade
       slide-number: "c/t"
       auto-stretch: false
       center-title-slide: true
-      theme: [default, ressources/reveal_inrae.scss]
+      theme: [default, styles/reveal_inrae.scss]
       plugins:
       - PdfExport
     beamer: 
       sansfont: Avenir Next LT Pro
-      include-in-header: ressources/beamercolorthemeinrae.sty
+      include-in-header: styles/beamercolorthemeinrae.sty
       aspectratio: 169
       keep-tex: false
+    docx:
+      reference-doc: templates/template.docx
+      toc-title: "Sommaire"
     pptx:
-      reference-doc: ressources/template.pptx
+      reference-doc: templates/template.pptx
       toc: true
