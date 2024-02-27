@@ -23,7 +23,7 @@
     background: place(image(cover-image, height: 26cm),)
   )
 
-  place(image("_extensions/inrae/ressources/assets/footer-cartouches.png", width: 21cm), dx: -2.5cm, dy: 21.5cm)
+  place(image("_extensions/inrae/davidcarayon/ressources/assets/footer-cartouches.png", width: 21cm), dx: -2.5cm, dy: 21.5cm)
 
   place(
     dx: 2.2cm,

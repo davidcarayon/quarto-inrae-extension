@@ -5,7 +5,7 @@ The goal of this quarto extension is to provide a wide range of quarto-based for
 Related work :
 
 - The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
-- The [inrae-projects]() quarto extension for custom INRAE projects (manuscripts, websites, books)
+<!-- - The [inrae-projects]() quarto extension for custom INRAE projects (manuscripts, websites, books) -->
 
 ## Prerequisites
 
