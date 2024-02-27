@@ -6,30 +6,32 @@
   cover-image: [],
   centre: [],
   date: [],
+  author: [],
   doc
 ) = {
   set text(lang: "fr")
   set text(font: (
-  "Avenir Next Pro",
-  "Helvetica",
+  "Avenir Next",
 ))
 
   set page("a4")
+
+  set par(justify: true)
 
   set page(
     margin: (left: 2.5cm, right: 1.6cm),
     background: place(image(cover-image, height: 26cm),)
   )
 
-  place(image("footer.png", width: 21cm), dx: -2.5cm, dy: 21.5cm)
+  place(image("_extensions/inrae/ressources/assets/footer-cartouches.png", width: 21cm), dx: -2.5cm, dy: 21.5cm)
 
   place(
-    dx: 8cm,
-    dy: 26cm,
+    dx: 2.2cm,
+    dy: 26.5cm,
     par(
       leading: 15pt,
       justify: true,
-      text(size: 16pt, cover-date, fill: rgb("#FFFFFF"))
+      text(size: 13pt, cover-date, fill: rgb("#FFFFFF"), weight: "thin")
     )
   )
 
@@ -59,6 +61,15 @@
       par(
         justify: true,
         text(size: 18pt, weight: "regular", font: "Raleway", fill: rgb("#FFFFFF"), cover-subtitle)
+      )
+  )
+
+   place(
+    dx: 8cm,
+    dy: 26cm,
+      par(
+        justify: true,
+        text(size: 13pt, weight: "thin", font: "Raleway", fill: rgb("#FFFFFF"), author)
       )
   )
 

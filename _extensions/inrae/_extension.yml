@@ -10,33 +10,43 @@ contributes:
       toc-title: "Sommaire"
       number-sections: true
       highlight-style: github
-      cover-image: assets/bloc-etat.png
-      css: styles/html_doc_styles.css
+      css: ressources/html-inrae.css
+    docx:
+      reference-doc: ressources/word-template.docx
+      toc-title: "Sommaire"
+    typst:
+      template-partials:
+          - ressources/typst-template.typ
+          - ressources/typst-show.typ
+      toc: true
+      toc-depth: 3
+      number-sections: true
+      papersize: a4
+      lang: fr
+      date: today
+      date-format: long
+      cover-img: "field.jpg"
     revealjs:
       title-slide-attributes:
-        data-background-image: assets/sigle-inrae.png
+        data-background-image: ressources/assets/sigle-inrae.png
         data-background-size: 40%
         data-background-position: left
         data-background-opacity: "0.5"
         data-footer: ""
-      include-after-body: templates/clean-title-slide.html
-      logo: assets/bloc-etat.png
+      include-after-body: ressources/revealjs-clean-title-slide.html
+      logo: ressources/assets/bloc-etat.png
       footer: "Pied de page"
       transition: fade
       slide-number: "c/t"
       auto-stretch: false
       center-title-slide: true
-      theme: [default, styles/reveal_inrae.scss]
+      theme: [default, ressources/revealjs-inrae.scss]
       plugins:
       - PdfExport
     beamer: 
-      sansfont: Avenir Next LT Pro
-      include-in-header: styles/beamercolorthemeinrae.sty
+      include-in-header: ressources/beamer-colorthemeinrae.sty
       aspectratio: 169
       keep-tex: false
-    docx:
-      reference-doc: templates/template.docx
-      toc-title: "Sommaire"
     pptx:
-      reference-doc: templates/template.pptx
+      reference-doc: ressources/powerpoint-template.pptx
       toc: true

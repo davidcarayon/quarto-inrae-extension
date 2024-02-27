@@ -8,12 +8,13 @@
   cover-subtitle: "$subtitle$",
   cover-image: "$cover-img$",
   centre: "$centre$",
+  author: "$author$",
   doc
 )
 
 // Headers
 #show heading: it => [
-  #set text(12pt, weight: "bold", font: "Raleway")
+  #set text(weight: "bold", font: "Raleway")
   #set text(rgb("#00a3a6"))
-  #block(smallcaps(it.body))
+  #block(it.body)
 ]

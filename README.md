@@ -1,49 +1,66 @@
-# Quarto extension for INRAE
+# Quarto formats for INRAE
 
-This extension is associated with the [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package and is mentioned [here](https://github.com/davidcarayon/InraeThemes#templates-quarto).
+The goal of this quarto extension is to provide a wide range of quarto-based formats for INRAE engineers and researchers. These are an __unofficial__ and __opiniated__ templates.
 
-## Installing the extension for a new document or project
+Related work :
 
-You will need to do this to get all the folders with images, tex and scss files and a prefilled quarto template.
+- The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
+- The [inrae-projects]() quarto extension for custom INRAE projects (manuscripts, websites, books)
+
+## Prerequisites
+
+To make the full use of these templates, you will need :
+
+* 2 fonts defined in INRAE's design system : `Raleway` and `Avenir Next Pro Cn` that can be downloaded [here]()
+* A LaTeX installation if you are using the `beamer` format 
+* Of course, [Quarto](https://quarto.org/) installed (**> 1.4.0**)
+
+## Installing in a new project
+
+You will need to do this to get all the folders with all the templates, assets and prefilled quarto templates :
 
 ```bash
 quarto use template davidcarayon/quarto-inrae-extension
 ```
 
-## Installation for an existing document
+## Installing for an existing project
 
-You may also use this format with an existing Quarto project or document to download the `_extensions` folder.
+You may also use this format with an existing project to download only the `_extensions` folder.
 
 ```bash
-quarto install extension davidcarayon/quarto-inrae-extension
+quarto add davidcarayon/quarto-inrae-extension
 ```
 
-# Usage
+## Usage
 
-## Documents
+The default template (`template.qmd` which is renamed to `your_directory_name.qmd`), is a revealjs presentation (html) output.
 
-<!-- 3 caps side by side -->
+You also can use the other `template_*.qmd` templates which all have an `inrae-*` format pre-configured.
 
-* inrae-typst (remplace pdf)
-* inrae-docx docx
-* inrae-html yaml bs
+These formats and designs are opiniated. Feel free to modify them to suit your needs in `_extensions/davidcarayon/inrae`. All suggestions and PR's are warmly welcomed.
 
-## Slides
+To customise your formats, see the relevant documentations :
 
-<!-- 3 caps side by side -->
+* Html and office documents (html/revealjs/docx/pptx) : [Quarto's documentation](https://quarto.org/docs/guide/)
+* Typst documents (pdf) : [Typst's documentation](https://typst.app/docs/)
+* LaTeX documents (beamer) : [LaTeX's Beamer documentation](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
-* inrae-revealjs : scss
-* inrae-beamer (à remplacer par typst aussi ?) tex
-* inrae-pptx pptx 
+## Formats description
 
-### Title slide with `inrae-revealjs`
+### Documents
 
-The slide number and footer are by default hidden on the title slide.
+- `inrae-html` : Provides an html document that can be hosted online (quarto-pub, github/lab pages, etc.). See [Publishing](https://quarto.org/docs/publishing/) in Quarto's documentation
+- `inrae-typst` : Generates a PDF document using the [Typst](https://typst.app) engine, a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+- `inrae-docx` : Generates a word document, typically to share for revisions
 
-The title slide footer can be specified using the following syntax:
+### Slides
 
-```
-  inrae-revealjs:
-    title-slide-attributes:
-      data-footer: "<a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/2.0/88x31.png' /><br></a>This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>Creative Commons Attribution-ShareAlike 2.0 Generic License</a>."
-```
+- `inrae-revealjs` : Generates HTML slides that can be hosted online (quarto-pub, github/lab pages, etc.). See [Publishing](https://quarto.org/docs/publishing/) in Quarto's documentation
+- `inrae-beamer` : Generates PDF beamer slides using LaTeX
+- `inrae-pptx` : Generates a Powerpoint presentation, typically to... whatever.
+
+> NB : Some obscure error may occur when rendering Beamer if you are using 2023's version of texlive. If so, I can only suggest to follow [this article](https://blog.cynkra.com/posts/2021-10-07-old-texlive/) to try and go back to 2022's version.
+
+## Gallery and examples
+
+- RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)

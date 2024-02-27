@@ -1,0 +1,139 @@
+---
+title: "Title"
+subtitle: "Subtitle"
+author: "First Author, second Author"
+centre: "Center name"
+lang: fr
+date: today
+date-format: long
+number-sections: true
+toc: true
+format: inrae-typst
+# cover-img: "your_image.png"
+---
+
+<!-- Formats pages -->
+```{=typst}
+#set page(
+margin: (x: 2cm, y: 2cm),
+background: none,
+header: [
+],
+footer: [
+#set align(center)
+#set text(10pt)
+#set text(rgb("#00a3a6"))
+Footer - 
+#counter(page).display(
+"P.1 sur 1",
+both: true,
+)
+#place(right, image("_extensions/inrae/ressources/assets/sigle-inrae-plein.png", height: 1.2cm), dy: -0.5cm, dx: 1cm)
+]
+)
+
+#outline(
+     title:[Sommaire]
+)
+
+#counter(page).update(0)
+
+#pagebreak()
+```
+
+# Introduction
+
+We're acquainted with the wormhole phenomenon, but this... Is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times. This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.
+
+# Main section
+
+It indicates a synchronic distortion in the areas emanating triolic waves. The cerebellum, the cerebral cortex, the brain stem,  the entire nervous system has been depleted of electrochemical energy. 
+
+```{r}
+n_lights <- 2 + 2
+n_lights
+```
+
+Any device like that would produce high levels of triolic waves. These walls have undergone some kind of selective molecular polarization. I haven't determined if our phaser energy can generate a stable field. We could alter the photons with phase discriminators.
+
+$$
+y = \text{Something} + \beta_1 x_1
+$$
+
+## Subsection
+
+Communication is not possible. The shuttle has no power (see @fig-n-lights). 
+
+Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. 
+
+Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?
+
+```{r plot-n-lights}
+#| echo: false
+#| label: fig-n-lights
+#| fig-cap: There are four lights
+#| fig-width: 5
+#| out-width: "100%"
+#| fig-height: 1
+#| fig-align: center
+
+par(mar = c(0, 0, 0, 0))
+plot(x = seq(1:n_lights), y = rep(1, 4), col = "darkgoldenrod1", 
+     pch = 8, cex = 4, axes = TRUE, ann = FALSE, xlab = FALSE, ylab = FALSE)
+```
+
+## Other heading
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+
+A markdown table :
+
++-----------+-----------+--------------------+
+| Fruit     | Price     | Advantages         |
++===========+===========+====================+
+| Bananas   | $1.34     | - built-in wrapper |
+|           |           | - bright color     |
++-----------+-----------+--------------------+
+| Oranges   | $2.10     | - cures scurvy     |
+|           |           | - tasty            |
++-----------+-----------+--------------------+
+
+: Sample grid table.
+
+::: {.callout-note}
+A note
+:::
+
+::: {.callout-tip}
+A tip
+:::
+
+::: {.callout-important}
+An important message
+:::
+
+::: {.callout-caution}
+Caution
+:::
+
+::: {.callout-warning}
+Warning
+:::
+
+#### A 4th level heading
+
+qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+Insert an image (@fig-photo) :  
+
+![A photo](field.jpg){width="50%" fig-align="center" #fig-photo}
+
+
+
+

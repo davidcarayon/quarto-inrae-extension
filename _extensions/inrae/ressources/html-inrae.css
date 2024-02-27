@@ -1,0 +1,30 @@
+
+/* Importing fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Avenir Next Pro Cn";
+  src: url("assets/Linotype - AvenirNextLTPro-Cn.otf") format("opentype");
+};
+
+.title {
+  color: #00a3a6;
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+body {
+font-family: 'Avenir Next Pro Cn';
+}
+
+h1,h2,h3,h4,h5 {
+  text-align: left;
+  color: #00a3a6;
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+.header-section-number {
+  color: #00a3a6;
+}

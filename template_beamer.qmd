@@ -1,0 +1,84 @@
+---
+title: "Title"
+subtitle: "Subtitle"
+author: "First Author"
+lang: fr
+date: today
+date-format: long
+format: inrae-beamer
+---
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+Normal text
+
+**Bold text**
+
+*italics*
+
+~~strikethrough~~
+
+[links](https://www.xaringan.gallery/).
+
+## Code expressions
+
+Code chunks and output
+
+```{r}
+#| echo: true
+lm(mpg ~ disp, data = mtcars)
+```
+
+## Block quotes
+
+> Dorothy followed her through many of the beautiful rooms in her
+> castle.
+
+## Ordered list
+
+1.  First item
+2.  Second item
+3.  Third item
+    1.  Indented item
+    2.  Indented item
+4.  Fourth item
+
+## Unordered list
+
+-   First item
+-   Second item
+-   Third item
+-   Fourth item
+
+## Callouts
+
+::: {.callout-note}
+A note
+:::
+
+::: {.callout-tip}
+A tip
+:::
+
+::: {.callout-important}
+An important message
+:::
+
+## Tables
+
+
++-----------+-----------+--------------------+
+| Fruit     | Price     | Advantages         |
++===========+===========+====================+
+| Bananas   | $1.34     | - built-in wrapper |
+|           |           | - bright color     |
++-----------+-----------+--------------------+
+| Oranges   | $2.10     | - cures scurvy     |
+|           |           | - tasty            |
++-----------+-----------+--------------------+
+
+: Sample grid table.
