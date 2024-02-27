@@ -12,7 +12,7 @@ Related work :
 
 To make the full use of these templates, you will need :
 
-* 2 fonts defined in INRAE's design system : `Raleway` and `Avenir Next Pro Cn` that can be downloaded [here]()
+* 2 fonts defined in INRAE's design system : `Raleway` and `Avenir Next Pro Cn` that can be downloaded [here](https://charte-identitaire.intranet.inrae.fr/content/download/3007/30036?version=5)
 * A LaTeX installation if you are using the `beamer` format 
 * Of course, [Quarto](https://quarto.org/) installed (**> 1.4.0**)
 
