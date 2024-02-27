@@ -2,6 +2,7 @@
 # Quarto templates for INRAE <img src="images/logo.png" align="right" width="20%"/>
 
 [![](https://img.shields.io/github/v/release/davidcarayon/quarto-inrae-extension?color=brightgreen&label=GitHub)](https://github.com/davidcarayon/quarto-inrae-extension/releases/latest)
+[![packageversion](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)](commits/master)
 
 The goal of this quarto extension is to provide a wide range of quarto-based formats for INRAE engineers and researchers. These are an __unofficial__ and __opiniated__ templates.
 
