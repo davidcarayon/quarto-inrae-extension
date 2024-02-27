@@ -1,12 +1,10 @@
 ---
-title: "Titre du document"
-subtitle: "Sous-titre du document"
+title: "Title"
+subtitle: "Subtitle"
 author: "First Author"
-centre: "Nom du centre"
 lang: fr
 date: today
 date-format: long
-cover-img: "field.jpg"
 format: inrae-docx
 ---
 

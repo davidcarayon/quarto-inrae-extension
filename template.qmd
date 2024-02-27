@@ -1,6 +1,6 @@
 ---
-title: "Titre de la présentation"
-subtitle: "Sous-titre de la présentation"
+title: "Title"
+subtitle: "Subtitle"
 author:
   - name: "**Premier auteur**"
     orcid: 0000-xxxx-xxxx-xxxx

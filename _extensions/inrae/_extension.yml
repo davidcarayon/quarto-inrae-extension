@@ -1,8 +1,19 @@
-title: Template INRAE
+title: Templates INRAE
 author: David Carayon
 version: 1.0.0
-
+quarto-version: ">=1.4.0"
 contributes:
+
+  ## Project definition
+  project:
+    project:
+      type: default
+     #type: website
+     #type: manuscript
+     #type: book
+    format: inrae-html
+
+  ## Formats definition
   formats:
     html:
       code-overflow: wrap

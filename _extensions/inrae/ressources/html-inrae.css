@@ -28,3 +28,109 @@ h1,h2,h3,h4,h5 {
 .header-section-number {
   color: #00a3a6;
 }
+
+/* Websites / navbar */
+
+.navbar {
+  border: 0px solid #275662;
+  border-bottom: 5px solid #275662;
+  background-color: #00a3a6;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+  color: #ffffff;
+  background-color: #275662;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+  color: #ffffff;
+  background-color: #275662;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+  color: #ffffff;
+  background-color: #275662;
+}
+
+/* Books / sidebar */
+
+#quarto-sidebar,
+#quarto-content .sidebar-navigation {
+    border: none !important;
+    color: #FFFFFF;
+    background-color: #00a3a6;
+
+    code {
+        font-size: inherit;
+        color: inherit;
+        background-color: transparent;
+    }
+
+    .sidebar-item-container {
+
+      a,
+      .chapter-number {
+          color: #FFFFFF;
+      }
+
+      a.active,
+      a:hover {
+          color: #FFFFFF;
+      }
+  }
+
+  .sidebar-item-section>.sidebar-item-container:first-child a,
+  .sidebar-item-section>.sidebar-item-container:first-child a.active,
+  .sidebar-item-section>.sidebar-item-container:first-child a:hover {
+      font-weight: bold;  
+      color: #FFFFFF;
+      background-color: transparent;
+  }
+
+}
+
+#quarto-header .quarto-secondary-nav-title {
+  text-align: center;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  
+}
+
+a.anchor-section::before {
+  color: #275662;
+  text-decoration-color: #275662;
+}
+
+a {
+  color: #ed6e6c;
+}
+
+.book-summary ul.summary li.active > a {
+  color: #ead8a2 !important;
+  background: 0 0;
+  text-decoration: none;
+}
+
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+  color: #ed6e6c;
+  font-weight: bold;
+}
+
+.sidebar-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  border-left: 1px solid #ed6e6c;
+  color: #ed6e6c !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left: 1px solid #ed6e6c;
+  color: #ed6e6c !important;
+}

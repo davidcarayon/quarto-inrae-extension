@@ -1,5 +1,5 @@
 ---
-title: "Title of an INRAE document"
+title: "Title"
 subtitle: "Subtitle"
 author:
   - name: "**First author**"

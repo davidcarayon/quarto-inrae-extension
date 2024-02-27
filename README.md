@@ -1,11 +1,12 @@
-# Quarto formats for INRAE
+[![](https://img.shields.io/github/v/release/davidcarayon/quarto-inrae-extension?color=brightgreen&label=GitHub)](https://github.com/davidcarayon/quarto-inrae-extension/releases/latest)
+
+# Quarto templates for INRAE
 
 The goal of this quarto extension is to provide a wide range of quarto-based formats for INRAE engineers and researchers. These are an __unofficial__ and __opiniated__ templates.
 
 Related work :
 
 - The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
-<!-- - The [inrae-projects]() quarto extension for custom INRAE projects (manuscripts, websites, books) -->
 
 ## Prerequisites
 
@@ -25,17 +26,19 @@ quarto use template davidcarayon/quarto-inrae-extension
 
 ## Installing for an existing project
 
-You may also use this format with an existing project to download only the `_extensions` folder.
+You may also use this format with an existing project to download only the `_extensions` folder (**not recommended**).
 
 ```bash
 quarto add davidcarayon/quarto-inrae-extension
 ```
 
-## Usage
+## How to use it
 
 The default template (`template.qmd` which is renamed to `your_directory_name.qmd`), is a revealjs presentation (html) output.
 
 You also can use the other `template_*.qmd` templates which all have an `inrae-*` format pre-configured.
+
+You will also find a `_quarto.yml` file to use if you want to use custom projects (manuscripts, websites, books).
 
 These formats and designs are opiniated. Feel free to modify them to suit your needs in `_extensions/davidcarayon/inrae`. All suggestions and PR's are warmly welcomed.
 
@@ -44,8 +47,9 @@ To customise your formats, see the relevant documentations :
 * Html and office documents (html/revealjs/docx/pptx) : [Quarto's documentation](https://quarto.org/docs/guide/)
 * Typst documents (pdf) : [Typst's documentation](https://typst.app/docs/)
 * LaTeX documents (beamer) : [LaTeX's Beamer documentation](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+* Quarto projects (manuscript, website, book) : [Quarto's documentation](https://quarto.org/docs/projects/quarto-projects.html)
 
-## Formats description
+## Standalone documents
 
 ### Documents
 
@@ -60,6 +64,26 @@ To customise your formats, see the relevant documentations :
 - `inrae-pptx` : Generates a Powerpoint presentation, typically to... whatever.
 
 > NB : Some obscure error may occur when rendering Beamer if you are using 2023's version of texlive. If so, I can only suggest to follow [this article](https://blog.cynkra.com/posts/2021-10-07-old-texlive/) to try and go back to 2022's version.
+
+
+## Projects
+
+If you wish to use one of the 3 project formats, you can edit the `_extensions/davidcarayon/inrae/_extension.yml` to comment/uncomment your desired output :
+
+```yaml
+  ## Project definition
+  project:
+    project:
+      type: default
+     #type: website
+     #type: manuscript
+     #type: book
+    format: inrae-html
+```
+
+- `manuscript` : Quarto manuscript projects provide a framework for writing and publishing scholarly articles. See more [here](https://quarto.org/docs/manuscripts/)
+- `website` : Quarto Websites are a convenient way to publish groups of documents. They can also be used as easy to deploy research project websites. See more [here](https://quarto.org/docs/websites/)
+- `book` : Quarto Books are combinations of multiple documents (chapters) into a single manuscript while not breaking cross-references. They can be typically used for complex reports. See more [here](https://quarto.org/docs/books/)
 
 ## Gallery and examples
 

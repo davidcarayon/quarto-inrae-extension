@@ -1,0 +1,48 @@
+  
+project:
+  title: "Project name"
+  type: inrae
+  render:
+    - "index.qmd"
+  output-dir: public 
+  
+###########
+##### To choose your project format : go to _extensions/davidcarayon/inrae and comment/uncomment your choice
+##### By default, no project features are enabled
+###########
+
+ # If type: website
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - text: "Source"
+        icon: git
+        href: https://github.com/davidcarayon/quarto-inrae-extension
+      - text: "Documentation"
+        icon: book
+        href: https://quarto.org
+
+
+# If type: book
+book:
+  title: "Title"
+  author: "Author"
+  date: today
+  sidebar: 
+        contents: auto
+  chapters:
+    - index.qmd
+
+# If type: manuscript
+manuscript: 
+  meca-bundle: true
+  article: index.qmd
+
+## Customising formats
+format:
+  inrae-html: default
+  typst-inrae: default
+  inrae-docx: default
