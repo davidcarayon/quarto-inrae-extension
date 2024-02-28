@@ -94,7 +94,7 @@ If you wish to use one of the 3 project formats, you can edit the `_extensions/d
 
 ![](images/projects.jpg)
 
-## Gallery and examples
+## Real-life examples
 
 - RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)
 
