@@ -6,7 +6,7 @@
 
 The goal of this quarto extension is to provide a wide range of quarto-based formats for INRAE engineers and researchers. These are an __unofficial__ and __opiniated__ templates.
 
-Related work :
+## Related work
 
 - The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
 
