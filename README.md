@@ -42,8 +42,6 @@ You will also find a `_quarto.yml` file to use if you want to use custom project
 
 Of course, this extension offers more features than you will typically need, so you can delete all the unnecessary qmd files.
 
-> NB : If you leave the _quarto.yml, any call to `quarto render` or `quarto preview` will move the output to a `_output/` directory.
-
 These formats and designs are opiniated. Feel free to modify them to suit your needs in `_extensions/davidcarayon/inrae`. All suggestions and PR's are warmly welcomed.
 
 To customise your formats, see the relevant documentations :
