@@ -16,8 +16,9 @@ format:
     lang: fr
     ## Uncomment if you want a footer for title slide :
     # title-slide-attributes:
-    #     data-footer: "<a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/2.0/88x31.png' /><br></a>This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>Creative Commons Attribution-ShareAlike 2.0 Generic License</a>."
+    #     data-footer: "<a rel='license' href='https://www.etalab.gouv.fr/licence-ouverte-open-licence/'><img alt='Creative Commons License' style='border-width:0; width:200px' src='https://www.etalab.gouv.fr/wp-content/uploads/2011/10/licence-ouverte-open-licence.gif' /><br></a>This work is licensed under an <a rel='license' href='https://www.etalab.gouv.fr/licence-ouverte-open-licence/'>Open Licence</a>."
 ---
+
 # Header 1
 
 ## Header 2
