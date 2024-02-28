@@ -1,5 +1,5 @@
 .DS_Store
-*.html
 *_files
 /.quarto/
 public/
+README.html

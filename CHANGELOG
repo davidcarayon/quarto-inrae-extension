@@ -1,5 +1,0 @@
-# quarto-inrae-extension 1.0.0
-* Cleaned the extension file tree
-* new Typst format to replace the laggy LaTeX report format
-* Better documentation
-* New feature : Projects (Manuscripts / websites / books)

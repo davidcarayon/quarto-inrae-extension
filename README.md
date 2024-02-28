@@ -36,11 +36,13 @@ quarto add davidcarayon/quarto-inrae-extension
 
 ## How to use it
 
-The default template (`template.qmd` which is renamed to `your_directory_name.qmd`), is a revealjs presentation (html) output.
+You can use the any of the `template_*.qmd` templates which all have an `inrae-*` format pre-configured.
 
-You also can use the other `template_*.qmd` templates which all have an `inrae-*` format pre-configured.
+You will also find a `_quarto.yml` file to use if you want to use custom projects (manuscripts, websites, books). These projects will use the `index.qmd` file.
 
-You will also find a `_quarto.yml` file to use if you want to use custom projects (manuscripts, websites, books).
+Of course, this extension offers more features than you will typically need, so you can delete all the unnecessary qmd files.
+
+> NB : If you leave the _quarto.yml, any call to `quarto render` or `quarto preview` will move the output to a `_output/` directory.
 
 These formats and designs are opiniated. Feel free to modify them to suit your needs in `_extensions/davidcarayon/inrae`. All suggestions and PR's are warmly welcomed.
 
@@ -48,7 +50,7 @@ To customise your formats, see the relevant documentations :
 
 * Html and office documents (html/revealjs/docx/pptx) : [Quarto's documentation](https://quarto.org/docs/guide/)
 * Typst documents (pdf) : [Typst's documentation](https://typst.app/docs/)
-* LaTeX documents (beamer) : [LaTeX's Beamer documentation](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+* LaTeX documents (beamer) : [LaTeX's Beamer documentation](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf)
 * Quarto projects (manuscript, website, book) : [Quarto's documentation](https://quarto.org/docs/projects/quarto-projects.html)
 
 ## Standalone documents
@@ -59,6 +61,8 @@ To customise your formats, see the relevant documentations :
 - `inrae-typst` : Generates a PDF document using the [Typst](https://typst.app) engine, a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
 - `inrae-docx` : Generates a word document, typically to share for revisions
 
+![](images/docs.jpg)
+
 ### Slides
 
 - `inrae-revealjs` : Generates HTML slides that can be hosted online (quarto-pub, github/lab pages, etc.). See [Publishing](https://quarto.org/docs/publishing/) in Quarto's documentation
@@ -67,6 +71,7 @@ To customise your formats, see the relevant documentations :
 
 > NB : Some obscure error may occur when rendering Beamer if you are using 2023's version of texlive. If so, I can only suggest to follow [this article](https://blog.cynkra.com/posts/2021-10-07-old-texlive/) to try and go back to 2022's version.
 
+![](images/slides.jpg)
 
 ## Projects
 
@@ -87,6 +92,16 @@ If you wish to use one of the 3 project formats, you can edit the `_extensions/d
 - `website` : Quarto Websites are a convenient way to publish groups of documents. They can also be used as easy to deploy research project websites. See more [here](https://quarto.org/docs/websites/)
 - `book` : Quarto Books are combinations of multiple documents (chapters) into a single manuscript while not breaking cross-references. They can be typically used for complex reports. See more [here](https://quarto.org/docs/books/)
 
+![](images/projects.jpg)
+
 ## Gallery and examples
 
 - RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)
+
+## Changelog
+
+### quarto-inrae-extension 1.0.0
+* Cleaned the extension file tree
+* new Typst format to replace the laggy LaTeX format for PDF reports
+* Better documentation
+* New feature : Projects (Manuscripts / websites / books)

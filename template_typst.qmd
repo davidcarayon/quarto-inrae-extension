@@ -28,7 +28,7 @@ Footer -
 "P.1 sur 1",
 both: true,
 )
-#place(right, image("_extensions/inrae/davidcarayon/ressources/assets/sigle-inrae-plein.png", height: 1.2cm), dy: -0.5cm, dx: 1cm)
+#place(right, image("_extensions/davidcarayon/inrae/ressources/assets/sigle-inrae-plein.png", height: 1.2cm), dy: -0.5cm, dx: 1cm)
 ]
 )
 

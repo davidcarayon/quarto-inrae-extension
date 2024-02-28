@@ -4,7 +4,7 @@ project:
   type: inrae
   render:
     - "index.qmd"
-  output-dir: public 
+  output-dir: _output 
   
 ###########
 ##### To choose your project format : go to _extensions/davidcarayon/inrae and comment/uncomment your choice
