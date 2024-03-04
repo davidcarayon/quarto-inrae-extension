@@ -10,6 +10,7 @@ The goal of this quarto extension is to provide a wide range of quarto-based for
 
 - The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
 
+
 ## Prerequisites
 
 To make the full use of these templates, you will need :
@@ -25,6 +26,12 @@ You will need to do this to get all the folders with all the templates, assets a
 ```bash
 quarto use template davidcarayon/quarto-inrae-extension
 ```
+
+> Note: Previous versions of this extension can still be downloaded using GitHub release tags :
+> 
+> ```bash
+> quarto use template davidcarayon/quarto-inrae-extension@v0.0.1
+> ```
 
 ## Installing for an existing project
 
