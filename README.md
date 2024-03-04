@@ -1,31 +1,112 @@
-# Quarto extension for INRAE
 
-This extension is associated with the [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package and is mentioned [here](https://github.com/davidcarayon/InraeThemes#templates-quarto).
+# Quarto templates for INRAE <img src="images/logo.png" align="right" width="20%"/>
 
-## Installing the extension for a new document or project
+[![](https://img.shields.io/github/v/release/davidcarayon/quarto-inrae-extension?color=brightgreen&label=GitHub)](https://github.com/davidcarayon/quarto-inrae-extension/releases/latest)
+[![packageversion](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)](commits/master)
 
-You will need to do this to get all the folders with images, tex and scss files and a prefilled quarto template.
+The goal of this quarto extension is to provide a wide range of quarto-based formats for INRAE engineers and researchers. These are an __unofficial__ and __opiniated__ templates.
+
+## Related work
+
+- The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
+
+
+## Prerequisites
+
+To make the full use of these templates, you will need :
+
+* 2 fonts defined in INRAE's design system : `Raleway` and `Avenir Next Pro Cn` that can be downloaded [here](https://charte-identitaire.intranet.inrae.fr/content/download/3007/30036?version=5)
+* A LaTeX installation if you are using the `beamer` format 
+* Of course, [Quarto](https://quarto.org/) installed (**> 1.4.0**)
+
+## Installing in a new project
+
+You will need to do this to get all the folders with all the templates, assets and prefilled quarto templates :
 
 ```bash
 quarto use template davidcarayon/quarto-inrae-extension
 ```
 
-## Installation for an existing document
+> Note: Previous versions of this extension can still be downloaded using GitHub release tags :
+> 
+> ```bash
+> quarto use template davidcarayon/quarto-inrae-extension@v0.0.1
+> ```
 
-You may also use this format with an existing Quarto project or document to download the `_extensions` folder.
+## Installing for an existing project
+
+You may also use this format with an existing project to download only the `_extensions` folder (**not recommended**).
 
 ```bash
-quarto install extension davidcarayon/quarto-inrae-extension
+quarto add davidcarayon/quarto-inrae-extension
 ```
 
-## Title slide with `inrae-revealjs`
+## How to use it
 
-The slide number and footer are hidden on the title slide.
+You can use the any of the `template_*.qmd` templates which all have an `inrae-*` format pre-configured.
 
-The title slide footer can be specified with the following syntax:
+You will also find a `_quarto.yml` file to use if you want to use custom projects (manuscripts, websites, books). These projects will use the `index.qmd` file.
 
+Of course, this extension offers more features than you will typically need, so you can delete all the unnecessary qmd files.
+
+These formats and designs are opiniated. Feel free to modify them to suit your needs in `_extensions/davidcarayon/inrae`. All suggestions and PR's are warmly welcomed.
+
+To customise your formats, see the relevant documentations :
+
+* Html and office documents (html/revealjs/docx/pptx) : [Quarto's documentation](https://quarto.org/docs/guide/)
+* Typst documents (pdf) : [Typst's documentation](https://typst.app/docs/)
+* LaTeX documents (beamer) : [LaTeX's Beamer documentation](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf)
+* Quarto projects (manuscript, website, book) : [Quarto's documentation](https://quarto.org/docs/projects/quarto-projects.html)
+
+## Standalone documents
+
+### Documents
+
+- `inrae-html` : Provides an html document that can be hosted online (quarto-pub, github/lab pages, etc.). See [Publishing](https://quarto.org/docs/publishing/) in Quarto's documentation
+- `inrae-typst` : Generates a PDF document using the [Typst](https://typst.app) engine, a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+- `inrae-docx` : Generates a word document, typically to share for revisions
+
+![](images/docs.jpg)
+
+### Slides
+
+- `inrae-revealjs` : Generates HTML slides that can be hosted online (quarto-pub, github/lab pages, etc.). See [Publishing](https://quarto.org/docs/publishing/) in Quarto's documentation
+- `inrae-beamer` : Generates PDF beamer slides using LaTeX
+- `inrae-pptx` : Generates a Powerpoint presentation, typically to... whatever.
+
+> NB : Some obscure error may occur when rendering Beamer if you are using 2023's version of texlive. If so, I can only suggest to follow [this article](https://blog.cynkra.com/posts/2021-10-07-old-texlive/) to try and go back to 2022's version.
+
+![](images/slides.jpg)
+
+## Projects
+
+If you wish to use one of the 3 project formats, you can edit the `_extensions/davidcarayon/inrae/_extension.yml` to comment/uncomment your desired output :
+
+```yaml
+  ## Project definition
+  project:
+    project:
+      type: default
+     #type: website
+     #type: manuscript
+     #type: book
+    format: inrae-html
 ```
-  inrae-revealjs:
-    title-slide-attributes:
-      data-footer: "<a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/2.0/88x31.png' /><br></a>This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>Creative Commons Attribution-ShareAlike 2.0 Generic License</a>."
-```
+
+- `manuscript` : Quarto manuscript projects provide a framework for writing and publishing scholarly articles. See more [here](https://quarto.org/docs/manuscripts/)
+- `website` : Quarto Websites are a convenient way to publish groups of documents. They can also be used as easy to deploy research project websites. See more [here](https://quarto.org/docs/websites/)
+- `book` : Quarto Books are combinations of multiple documents (chapters) into a single manuscript while not breaking cross-references. They can be typically used for complex reports. See more [here](https://quarto.org/docs/books/)
+
+![](images/projects.jpg)
+
+## Real-life examples
+
+- RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)
+
+## Changelog
+
+### quarto-inrae-extension 1.0.0
+* Cleaned the extension file tree
+* new Typst format to replace the laggy LaTeX format for PDF reports
+* Better documentation
+* New feature : Projects (Manuscripts / websites / books)

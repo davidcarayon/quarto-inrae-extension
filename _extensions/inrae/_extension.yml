@@ -1,8 +1,19 @@
-title: Template INRAE
+title: Templates INRAE
 author: David Carayon
-version: 0.0.1
-
+version: 1.0.0
+quarto-version: ">=1.2.0"
 contributes:
+
+  ## Project definition
+  project:
+    project:
+      type: default
+     #type: website
+     #type: manuscript
+     #type: book
+    format: inrae-html
+
+  ## Formats definition
   formats:
     html:
       code-overflow: wrap
@@ -10,46 +21,43 @@ contributes:
       toc-title: "Sommaire"
       number-sections: true
       highlight-style: github
-      cover-image: ressources/bloc-etat
-      css: ressources/html_doc_styles.css
-    pdf:
-      documentclass: scrreprt
-      sansfont: Raleway
-      mainfont: Avenir Next LT Pro
-      toc-title: "Sommaire"
-      include-before-body: ressources/page_de_garde.tex
-      include-in-header: ressources/preamble.tex
-      include-after-body: ressources/lastPage.tex
-      geometry:
-        - top=25mm
-        - left=25mm
-        - right=25mm
-        - bottom=25mm
+      css: ressources/html-inrae.css
     docx:
-      reference-doc: ressources/template.docx
+      reference-doc: ressources/word-template.docx
       toc-title: "Sommaire"
+    typst:
+      template-partials:
+          - ressources/typst-template.typ
+          - ressources/typst-show.typ
+      toc: true
+      toc-depth: 3
+      number-sections: true
+      papersize: a4
+      lang: fr
+      date: today
+      date-format: long
+      cover-img: "field.jpg"
     revealjs:
       title-slide-attributes:
-        data-background-image: ressources/sigle-inrae.png
+        data-background-image: ressources/assets/sigle-inrae.png
         data-background-size: 40%
         data-background-position: left
         data-background-opacity: "0.5"
         data-footer: ""
-      include-after-body: ressources/clean-title-slide.html
-      logo: ressources/bloc-etat.png
+      include-after-body: ressources/revealjs-clean-title-slide.html
+      logo: ressources/assets/bloc-etat.png
       footer: "Pied de page"
       transition: fade
       slide-number: "c/t"
       auto-stretch: false
       center-title-slide: true
-      theme: [default, ressources/reveal_inrae.scss]
+      theme: [default, ressources/revealjs-inrae.scss]
       plugins:
       - PdfExport
     beamer: 
-      sansfont: Avenir Next LT Pro
-      include-in-header: ressources/beamercolorthemeinrae.sty
+      include-in-header: ressources/beamer-colorthemeinrae.sty
       aspectratio: 169
       keep-tex: false
     pptx:
-      reference-doc: ressources/template.pptx
+      reference-doc: ressources/powerpoint-template.pptx
       toc: true

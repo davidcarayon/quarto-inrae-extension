@@ -1,0 +1,284 @@
+/*-- scss:defaults --*/
+// Color system
+$white:    #F5F6FA !default;
+$gray-100: #F4F4F4 !default;
+$gray-200: #E9E9E9 !default;
+$gray-300: #D3D3D3 !default;
+$gray-400: #C7C7C7 !default;
+$gray-500: #A6A6A6 !default;
+$gray-600: #909090 !default;
+$gray-700: #424242 !default;
+$gray-800: #373737 !default;
+$gray-900: #2C2C2C !default;
+$black:    #000 !default;
+$blue:    #4455FF !default;
+$indigo:  #6610f2 !default; 
+$purple:  #CC99CC !default;
+$pink:    #CC6699 !default;
+$red:     #FF5555 !default;
+$orange:  #FF9933 !default;
+$yellow:  #FFFF99 !default;
+$green:   #33CC99 !default;
+$teal:    #20c997 !default; 
+$cyan:    #99CCFF !default;
+$light-orange: #FFCC66 !default;
+$inrae-charte: #00a3a6 !default;
+$inrae-sombre: #275662 !default;
+
+$primary:       $orange !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+
+// Document parameters
+$body-bg: #fff;
+$body-color: $inrae-sombre;
+$link-color: $indigo;
+$presentation-heading-color: $inrae-charte;
+$presentation-heading-line-height: 1.2;
+$presentation-h1-font-size: 1.4em;
+
+
+/*-- scss:rules --*/
+
+
+// Text Format
+.reveal .slide-number-a {
+ color: $inrae-sombre;
+}
+
+.reveal .slide-number-delimiter {
+ color: $inrae-sombre;
+}
+
+.reveal .slide-number-b {
+ color: $inrae-sombre;
+}
+
+.reveal img.slide-logo {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 12px;
+    max-height: 1.5em;
+    height: 100%;
+    width: auto;
+}
+
+.reveal h1.title {
+  background: -webkit-linear-gradient($inrae-sombre, $inrae-charte);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reveal h1 {
+  text-align: center;
+}
+
+.reveal h2 {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* shadows */
+}
+
+.reveal p {
+  color: $inrae-sombre;
+}
+
+// Slides
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+}
+// Alternative styles
+.box1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: $body-color;
+  border-radius: 30px;
+}
+
+.box2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: $body-color;
+  border-radius: 30px;
+}
+
+// Inverse style
+.inverse {
+  color: #f3f3f3;
+  h1, h2, h3, footer, p {
+    color: #f3f3f3;
+  }
+  
+  .slide-background-content {
+    background-color: #00a3a6;
+  }
+
+    .callout-caption {
+    color: $body-color;
+  }
+
+  pre {
+    background-color: #272822;
+  }
+
+  pre code {
+    background-color: #272822;
+    color: #d6d6d6;
+  }
+
+  pre.sourceCode code {
+      background-color: #2b2b2b;
+      white-space: pre
+  }
+
+  pre > code.sourceCode > span {
+    color: #f8f8f2;
+  }
+
+  code span {
+    color: #f8f8f2;
+  }
+
+  code.sourceCode > span {
+    color: #f8f8f2;
+  }
+
+  div.sourceCode,
+  div.sourceCode pre.sourceCode {
+    color: #f8f8f2;
+  }
+
+  code span.ot {
+    color: #ffa07a;
+  }
+
+  code span.at {
+    color: #ffd700;
+  }
+
+  code span.ss {
+    color: #abe338;
+  }
+
+  code span.an {
+    color: #d4d0ab;
+  }
+
+  code span.fu {
+    color: #ffd700;
+  }
+
+  code span.st {
+    color: #abe338;
+  }
+
+  code span.cf {
+    color: #ffa07a;
+  }
+
+  code span.op {
+    color: #00e0e0;
+  }
+
+  code span.er {
+    color: #dcc6e0;
+  }
+
+  code span.bn {
+    color: #dcc6e0;
+  }
+
+  code span.al {
+    color: #dcc6e0;
+  }
+
+  code span.va {
+    color: #f5ab35;
+  }
+
+  code span.bu {
+    color: #f5ab35;
+  }
+
+  code span.ex {
+    color: #ffd700;
+  }
+
+  code span.pp {
+    color: #dcc6e0;
+  }
+
+  code span.in {
+    color: #d4d0ab;
+  }
+
+  code span.vs {
+    color: #abe338;
+  }
+
+  code span.wa {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.do {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.im {
+    color: #f8f8f2;
+  }
+
+  code span.ch {
+    color: #abe338;
+  }
+
+  code span.dt {
+    color: #dcc6e0;
+  }
+
+  code span.fl {
+    color: #f5ab35;
+  }
+
+  code span.co {
+    color: #d4d0ab;
+  }
+
+  code span.cv {
+    color: #d4d0ab;
+    font-style: italic;
+  }
+
+  code span.cn {
+    color: #ffa07a;
+  }
+
+  code span.sc {
+    color: #00e0e0;
+  }
+
+  code span.dv {
+    color: #dcc6e0;
+  }
+
+  code span.kw {
+    color: #ffa07a;
+  }
+}
+
+// Inverse slide title style
+.inverse-slide-title {
+  color: #f3f3f3;
+  h1, h2{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: $presentation-heading-color;
+    border-radius: 30px;
+    text-transform: uppercase;
+  }
+}
