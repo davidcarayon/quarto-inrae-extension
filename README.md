@@ -102,6 +102,7 @@ If you wish to use one of the 3 project formats, you can edit the `_extensions/d
 ## Real-life examples
 
 - RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)
+- RevealJS presentation prepared for a training on phylogenetic methods : [slides](https://sguyader.github.io/karubionetphylogeny)
 - Quarto website filled with html docs and revealjs slides, all based on this extension, with a few tweaks : [documents.migale.inrae.fr](https://documents.migale.inrae.fr/)
 
 ## Changelog
