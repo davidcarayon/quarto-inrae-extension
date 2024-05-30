@@ -9,7 +9,7 @@ The goal of this quarto extension is to provide a wide range of quarto-based for
 ## Related work
 
 - The [{InraeThemes}](https://github.com/davidcarayon/InraeThemes) R package for ggplot2 and bootstrap themes
-
+- The [inrae-project-website](https://github.com/SebastienBoutry/inrae-project-website) extension for research project website templates
 
 ## Prerequisites
 
