@@ -11,6 +11,7 @@ author:
     orcid: 0000-xxxx-xxxx-xxxx
 date: today
 date-format: long
+mainfont: Poppins
 format: 
   inrae-revealjs: 
     lang: fr

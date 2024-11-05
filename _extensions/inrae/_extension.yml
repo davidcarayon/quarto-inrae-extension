@@ -9,7 +9,6 @@ contributes:
     project:
       type: default
      #type: website
-     #type: manuscript
      #type: book
     format: inrae-html
 
