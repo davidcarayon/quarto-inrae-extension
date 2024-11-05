@@ -1,0 +1,96 @@
+---
+title: "Title"
+subtitle: "Subtitle"
+author:
+  - name: "**Premier auteur**"
+    orcid: 0000-xxxx-xxxx-xxxx
+    email: prenom.nom@inrae.fr
+    url: https://lien-site.fr
+  - name: Second auteur
+    email: prenom.nom@inrae.fr
+    orcid: 0000-xxxx-xxxx-xxxx
+date: today
+date-format: long
+mainfont: Poppins
+format: 
+  inrae-revealjs: 
+    lang: fr
+    ## Uncomment if you want a footer for title slide :
+    # title-slide-attributes:
+    #     data-footer: "<a rel='license' href='https://www.etalab.gouv.fr/licence-ouverte-open-licence/'><img alt='Creative Commons License' style='border-width:0; width:200px' src='https://www.etalab.gouv.fr/wp-content/uploads/2011/10/licence-ouverte-open-licence.gif' /><br></a>This work is licensed under an <a rel='license' href='https://www.etalab.gouv.fr/licence-ouverte-open-licence/'>Open Licence</a>."
+---
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+Normal text
+
+**Bold text**
+
+*italics*
+
+~~strikethrough~~
+
+[links](https://www.xaringan.gallery/).
+
+## Code expressions
+
+Code chunks and output
+
+```{r}
+#| echo: true
+lm(mpg ~ disp, data = mtcars)
+```
+
+## Block quotes
+
+> Dorothy followed her through many of the beautiful rooms in her
+> castle.
+
+## Ordered list
+
+1.  First item
+2.  Second item
+3.  Third item
+    1.  Indented item
+    2.  Indented item
+4.  Fourth item
+
+## Unordered list
+
+-   First item
+-   Second item
+-   Third item
+-   Fourth item
+  
+
+## Callouts
+
+::: {.callout-note}
+A note
+:::
+
+::: {.callout-tip}
+A tip
+:::
+
+::: {.callout-important}
+An important message
+:::
+
+## Tables
+
++-----------+-----------+--------------------+
+| Fruit     | Price     | Advantages         |
++===========+===========+====================+
+| Bananas   | $1.34     | - built-in         |
+|           |           | - bright color     |
++-----------+-----------+--------------------+
+| Oranges   | $2.10     | - cures            |
+|           |           | - tasty            |
++-----------+-----------+--------------------+
+
+: Sample grid table.
