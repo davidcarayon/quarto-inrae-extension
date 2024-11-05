@@ -87,7 +87,7 @@ If you wish to use one of the 2 project formats, you can edit the `_extensions/d
 
 ## Real-life examples
 
-- RevealJS presentation of the SK8 project (FR) : [slides](https://davidcarayon.github.io/slides/talks/CITISES_SK8/) and [code](https://github.com/davidcarayon/slides/tree/main/talks/CITISES_SK8)
+- RevealJS presentation of using R in VSCode : [slides](https://davidcarayon.github.io/Insee-vscode/) | [code](https://github.com/davidcarayon/Insee-vscode)
 - RevealJS presentation prepared for a training on phylogenetic methods : [slides](https://sebastien.guyader.pages.mia.inra.fr/karuphylo/)
 - Quarto website filled with html docs and revealjs slides, all based on this extension, with a few tweaks : [documents.migale.inrae.fr](https://documents.migale.inrae.fr/)
 
