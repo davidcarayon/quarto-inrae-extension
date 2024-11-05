@@ -1,0 +1,108 @@
+/* ---------------- */
+/* This code creates a custom style for quarto.report */
+/* ---------------- */
+
+/* ---------- */
+/* TOC */
+/* ---------- */
+#TOC {
+  page-break-after: always;
+}
+
+#TOC ul {
+  list-style: square;
+}
+
+#TOC ul li::marker {
+  color: var(--accent-color);
+}
+
+#TOC ul li {
+  border-top: 0.25pt solid #c1c1c1;
+  margin: 0.2em 0;
+  padding-top: 0.2em;
+}
+
+#TOC ul li a {
+  color: inherit;
+  text-decoration-line: inherit;
+}
+
+#TOC ul li a::after {
+  color: var(--accent-color);
+  content: target-counter(attr(href), page);
+  float: right;
+}
+
+/* ---------- */
+/* Columns */
+/* ---------- */
+
+/* wrapper */
+.col-wrapper-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.col-wrapper-2-unequal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* content */
+.col-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.col-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.col-3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.col-1-2 {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.col-2-3 {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+
+/* ---------- */
+/* img */
+/* ---------- */
+
+img, svg {
+  padding: 0;
+  margin: 0;
+}
+
+figure{
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- Setting up CSS variables ----- */
+/* this avoid to repeat each Pandoc statement to pass to multiples CSS statements */
+
+:root{
+
+    --header-font: $if(style.font.header)$$style.font.header$$else$sans$endif$;
+    --main-font: $if(style.font.main)$$style.font.main$$else$serif$endif$;
+    --mono-font: $if(style.font.mono)$$style.font.mono$$else$mono$endif$;
+    --base_size: $if(style.font.size)$$style.font.size$$else$12pt$endif$;
+
+    --accent-font-color: $if(style.color.font-accent)$$style.color.font-accent$$else$#fdfdfd$endif$;
+    --accent-color: $if(style.color.accent)$$style.color.accent$$else$coral$endif$;
+    --font-color: $if(style.color.font)$$style.color.font$$else$black$endif$;
+    --third-color: $if(style.color.third)$$style.color.third$$else$coral$endif$;
+    --main-img: $if(style.main-img)$$style.main-img$$endif$; 
+
+    --pagesize-width: $if(style.pagesize.width)$$style.pagesize.width$$else$210mm$endif$;
+    --pagesize-height: $if(style.pagesize.height)$$style.pagesize.height$$else$297mm$endif$;
+}

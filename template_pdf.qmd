@@ -1,36 +1,37 @@
 ---
-title: Title of the project
-author:
-  - name: First author
-    orcid: 0000-xxxx-xxxx-xxxx
-    corresponding: true
-    email: prenom.nom@inrae.fr
-    roles:
-      - Investigation
-      - Project administration
-      - Software
-      - Visualization
-    affiliations:
-      - INRAE
-  - name: Second Author
-    orcid: 0000-xxxx-xxxx-xxxx
-    corresponding: false
-    roles: []
-    affiliations:
-      - INRAE
-keywords:
-  - Quarto
-  - INRAE
-abstract: |
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-plain-language-summary: |
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-key-points:
-  - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-  - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+title: "This is a fantastic title for a wonderful report"
+subtitle: "**>** Subtitle of this amazing report"
+author: Author(s)
 date: last-modified
+date-format: full
+lang: en
+format: inrae-pdf
+always_allow_html: yes
+prefer-html: true
+execute: 
+  fig-format: 'svglite'
+  echo: false
+  warning: false
+style:
+  font:
+    header: "Raleway"
+    main: "Poppins"
+    mono: "Fira Code"
+    size: 12pt
+  color:
+    font: "#404040"
+    font-accent: "#fdfdfd"
+    accent: "#00A3A6"
+    third: "#5e008a"
+  pagesize:
+    width: 210mm
+    height: 297mm
+  main-img: url(https://raw.githubusercontent.com/rfortherestofus/pagedreport/master/inst/resources/img/hazelnuts-img.jpg)
 ---
 
+```{r setup}
+knitr::opts_knit$set('rmarkdown.pandoc.to' = 'html')
+```
 
 ## A really awesome part 1
 
@@ -40,26 +41,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-
-<center>
-
-[I'm a centered button](){.btn .btn-primary role="button" align="center"} 
-
-</center>
-
-
-
 ### Another second level header
-
-
-::: {.callout-tip}
-Look at the pills down there ! 
-:::
-
-::: {.panel-tabset .nav-pills}
-
-## Scatterplot
-
 
 ```{r}
 library(InraeThemes)
@@ -82,37 +64,6 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
   scale_color_inrae()
 ```
 
-## Boxplot
-
-```{r}
-ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
-  geom_boxplot(alpha = 0.7) +
-  labs(
-    title = "Masse corporelle des différentes espèces de pingouins",
-    x = "Espèce",
-    y = "Masse corporelle (g)"
-  ) +
-  theme_inrae() +
-  scale_fill_inrae()
-```
-
-## Histogram
-
-```{r}
-ggplot(penguins, aes(x = bill_length_mm, fill = species)) +
-  geom_histogram(binwidth = 2, position = "stack", color = "white") +
-  labs(
-    title = "Distribution de la longueur du bec des pingouins",
-    x = "Longueur du bec (mm)",
-    y = "Fréquence"
-  ) +
-  theme_inrae() +
-  scale_fill_inrae()
-```
-
-:::
-
-
 Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
 
 - element 1
@@ -127,12 +78,118 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. 
 
+
+```{r}
+ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Masse corporelle des différentes espèces de pingouins",
+    x = "Espèce",
+    y = "Masse corporelle (g)"
+  ) +
+  theme_inrae() +
+  scale_fill_inrae()
+```
+
+
+### Tables
+
+#### With `kable`
+
+```{r}
+mtcars |>
+  head(5) |>
+  knitr::kable()
+```
+
+#### With `flextable`
+
+You have to add `always_allow_html: yes` in the YAML (strange it's supposed to be `prefer-html: true`).
+```{r}
+# see https://github.com/quarto-dev/quarto-cli/issues/8717
+mtcars |>
+  head(5) |>
+  flextable::flextable()
+```
+
+#### With `gt`
+
+You have to remove the default CSS, which isn't fully supported by `weasyprint` to apply a new one.
+```{r}
+# see https://github.com/rstudio/gt/issues/816
+remove_css <- function(x) {
+  x <- gsub("<style>.*</style>", "", x)
+  htmltools::HTML(x)
+}
+
+mtcars |>
+  head(5) |>
+  gt::gt() |>
+    InraeThemes::theme_inrae_gt() |> 
+  gt::as_raw_html(inline_css = FALSE) |>
+  remove_css() 
+
+```
+
+
+#### Some columns
+
+:::col-wrapper-2
+::::col-1
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+::::
+
+::::col-2
+```{r}
+#| label: airquality_col
+#| fig-height: 3.8
+#| fig-width: 3.2
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess") +
+  theme_inrae()
+```
+
+::::
+:::
+
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+
+:::col-wrapper-2-unequal
+::::col-1-2
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus.
+::::
+
+::::col-3
+**54% of the people**
+
+**62% of the other people**
+
+**21% of the rest**
+::::
+:::
+
+:::col-wrapper-2-unequal
+::::col-1
+**54% of the people**
+
+**62% of the other people**
+
+**21% of the rest**
+::::
+
+::::col-2-3
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat.
+::::
+:::
+
 ### Still another one
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
 
 ```{r}
-#| echo: true
+
 ggplot(penguins, aes(x = bill_length_mm, fill = species)) +
   geom_histogram(binwidth = 2, position = "stack", color = "white") +
   labs(

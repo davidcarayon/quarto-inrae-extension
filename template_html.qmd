@@ -11,102 +11,194 @@ author:
     orcid: 0000-xxxx-xxxx-xxxx
 date: today
 date-format: long
-format: inrae-html
+format: 
+  inrae-html:
+    github-repo: "https://github.com/davidcarayon/inrae-report"       
+    bg-image: https://raw.githubusercontent.com/rfortherestofus/pagedreport/master/inst/resources/img/hazelnuts-img.jpg   
+execute: 
+  warning: false
 ---
 
-# Introduction
+## A really awesome part 1
 
-We're acquainted with the wormhole phenomenon, but this... Is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times. This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.
+### Second level header
 
-# Main section
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam.
 
-It indicates a synchronic distortion in the areas emanating triolic waves. The cerebellum, the cerebral cortex, the brain stem,  the entire nervous system has been depleted of electrochemical energy. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-```{r}
-n_lights <- 2 + 2
-n_lights
-```
 
-Any device like that would produce high levels of triolic waves. These walls have undergone some kind of selective molecular polarization. I haven't determined if our phaser energy can generate a stable field. We could alter the photons with phase discriminators.
+<center>
 
-$$
-y = \text{Something} + \beta_1 x_1
-$$
+[I'm a centered button](){.btn .btn-primary role="button" align="center"} 
 
-## Subsection
+</center>
 
-Communication is not possible. The shuttle has no power (see @fig-n-lights). 
 
-Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. 
 
-Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?
+### Another second level header
 
-```{r plot-n-lights}
-#| echo: false
-#| label: fig-n-lights
-#| fig-cap: There are four lights
-#| fig-width: 5
-#| out-width: "100%"
-#| fig-height: 1
-#| fig-align: center
-
-par(mar = c(0, 0, 0, 0))
-plot(x = seq(1:n_lights), y = rep(1, 4), col = "darkgoldenrod1", 
-     pch = 8, cex = 4, axes = TRUE, ann = FALSE, xlab = FALSE, ylab = FALSE)
-```
-
-## Other heading
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-
-A markdown table :
-
-+-----------+-----------+--------------------+
-| Fruit     | Price     | Advantages         |
-+===========+===========+====================+
-| Bananas   | $1.34     | - built-in wrapper |
-|           |           | - bright color     |
-+-----------+-----------+--------------------+
-| Oranges   | $2.10     | - cures scurvy     |
-|           |           | - tasty            |
-+-----------+-----------+--------------------+
-
-: Sample grid table.
-
-::: {.callout-note}
-A note
-:::
 
 ::: {.callout-tip}
-A tip
+Look at the pills down there ! 
 :::
 
-::: {.callout-important}
-An important message
+::: {.panel-tabset .nav-pills}
+
+## Scatterplot
+
+
+```{r}
+library(InraeThemes)
+library(ggplot2)
+library(palmerpenguins)
+library(showtext)
+
+# Load the fonts
+showtext::showtext_auto()
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Relation entre la longueur des nageoires et la masse corporelle",
+    subtitle = "Données des pingouins par espèce",
+    x = "Longueur des nageoires (mm)",
+    y = "Masse corporelle (g)"
+  ) +
+  theme_inrae() +
+  scale_color_inrae()
+```
+
+## Boxplot
+
+```{r}
+ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Masse corporelle des différentes espèces de pingouins",
+    x = "Espèce",
+    y = "Masse corporelle (g)"
+  ) +
+  theme_inrae() +
+  scale_fill_inrae()
+```
+
+## Histogram
+
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, fill = species)) +
+  geom_histogram(binwidth = 2, position = "stack", color = "white") +
+  labs(
+    title = "Distribution de la longueur du bec des pingouins",
+    x = "Longueur du bec (mm)",
+    y = "Fréquence"
+  ) +
+  theme_inrae() +
+  scale_fill_inrae()
+```
+
 :::
 
-::: {.callout-caution}
-Caution
+
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+
+- element 1
+- element 2
+- element 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+> ### Blockquote title
+>
+> Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. 
+
+### Still another one
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+```{r}
+#| echo: true
+ggplot(penguins, aes(x = bill_length_mm, fill = species)) +
+  geom_histogram(binwidth = 2, position = "stack", color = "white") +
+  labs(
+    title = "Distribution de la longueur du bec des pingouins",
+    x = "Longueur du bec (mm)",
+    y = "Fréquence"
+  ) +
+  theme_inrae() +
+  scale_fill_inrae()
+```
+
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+#### Level 4
+
+Phasellus gravida metus at finibus congue. Cras placerat vehicula feugiat. Maecenas pharetra tincidunt leo vel interdum. Nunc id rhoncus lorem, blandit consequat lacus. Morbi eu ex ac dui bibendum congue. Nam vel leo ullamcorper, rhoncus orci non, feugiat mi. Quisque eget bibendum risus. Cras mollis varius enim eu aliquet. Vivamus ac risus varius, maximus arcu nec, posuere nisi. Integer neque tellus, sagittis eu nisi id, porttitor luctus mi. Vestibulum scelerisque quis nisl ut pharetra.
+
+## And now part 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+1. element
+2. element
+3. element
+
+### Second level - once again
+
+#### Level 4 which really is awesome
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+#### Level 4, again !
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+:::third-page
+
+## Header 2, once again
+
+### Second level, haven't I mentioned it before ?
+
+#### Level 4, oops
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+#### Level 4, again ???
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
+### Second level again and again
+
+#### Level 4, seems like there is some identical headers here
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
+
 :::
 
-::: {.callout-warning}
-Warning
-:::
+## Some more text because I don't know what to write
 
-#### A 4th level heading
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
 
-qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+### Second level again and again and again
 
-Insert an image (@fig-photo) :  
+#### Level 4, the nicest on Earth
 
-![A photo](field.jpg){width="50%" fig-align="center" #fig-photo}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit dolor est, non accumsan urna maximus id. Quisque sit amet posuere ex, vel porttitor velit. Praesent tellus lectus, pulvinar non luctus non, faucibus id diam. Ut condimentum, ante nec lobortis hendrerit, eros nunc gravida ante, id sodales ligula elit ut odio. Vestibulum imperdiet arcu quis massa facilisis, et sollicitudin urna porttitor. Praesent laoreet velit ac sagittis efficitur. Sed sit amet porttitor ipsum. Aliquam magna leo, efficitur vel laoreet ut, gravida ut ligula.
 
 
+```{r}
 
-
+ggplot(penguins, aes(x = flipper_length_mm, fill = species)) +
+  geom_density(alpha = 0.6) +
+  labs(
+    title = "Distribution de la longueur des nageoires par espèce",
+    x = "Longueur des nageoires (mm)",
+    y = "Densité"
+  ) +
+  theme_inrae() +
+  scale_fill_inrae()
+```

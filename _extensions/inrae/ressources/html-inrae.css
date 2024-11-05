@@ -2,11 +2,7 @@
 /* Importing fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
-@font-face {
-  font-family: "Avenir Next Pro Cn";
-  src: url("assets/Linotype - AvenirNextLTPro-Cn.otf") format("opentype");
-};
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .title {
   color: #00a3a6;
@@ -15,7 +11,7 @@
 }
 
 body {
-font-family: 'Avenir Next Pro Cn';
+font-family: 'Atkinson Hyperlegible';
 }
 
 h1,h2,h3,h4,h5 {

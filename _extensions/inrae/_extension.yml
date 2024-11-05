@@ -1,7 +1,7 @@
 title: Templates INRAE
 author: David Carayon
-version: 1.0.0
-quarto-version: ">=1.2.0"
+version: 1.1.0
+quarto-version: ">=1.4.0"
 contributes:
 
   ## Project definition
@@ -15,27 +15,31 @@ contributes:
   ## Formats definition
   formats:
     html:
-      code-overflow: wrap
-      theme: lumen
-      toc-title: "Sommaire"
-      number-sections: true
-      highlight-style: github
-      css: ressources/html-inrae.css
+      toc: true
+      code-fold: true
+      code-summary: "Code"
+      primary-color: "#00A3A6"
+      toc-location: left
+      toc-title: " "
+      theme: [custom.scss]
+      include-after-body: "html/footer.html"
+      template-partials:
+        - html/title-block.html
+      css: css/style.css
+      smooth-scroll: true
+      code-annotations: hover
+      title-block-banner: true  
+      logo: "css/logo.png"
     docx:
       reference-doc: ressources/word-template.docx
       toc-title: "Sommaire"
-    typst:
-      template-partials:
-          - ressources/typst-template.typ
-          - ressources/typst-show.typ
+    pdf:
+      minimal: true 
+      pdf-engine: weasyprint
+      template: "html/template.html"
+      css: "css/pdfreport.css"
+      embed_resources: true
       toc: true
-      toc-depth: 3
-      number-sections: true
-      papersize: a4
-      lang: fr
-      date: today
-      date-format: long
-      cover-img: "field.jpg"
     revealjs:
       title-slide-attributes:
         data-background-image: ressources/assets/sigle-inrae.png

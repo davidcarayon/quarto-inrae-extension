@@ -2,14 +2,20 @@
 project:
   title: "Project name"
   type: inrae
-  render:
-    - "index.qmd"
-  output-dir: _output 
+  output-dir: public 
+
+## Customising formats
+format:
+  inrae-html: default
+  typst-inrae: default
+  inrae-docx: default
   
 ###########
 ##### To choose your project format : go to _extensions/davidcarayon/inrae and comment/uncomment your choice
 ##### By default, no project features are enabled
 ###########
+
+
 
  # If type: website
 website:
@@ -35,14 +41,3 @@ book:
         contents: auto
   chapters:
     - index.qmd
-
-# If type: manuscript
-manuscript: 
-  meca-bundle: true
-  article: index.qmd
-
-## Customising formats
-format:
-  inrae-html: default
-  typst-inrae: default
-  inrae-docx: default
