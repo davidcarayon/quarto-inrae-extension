@@ -13,7 +13,7 @@ date: today
 date-format: long
 format: 
   inrae-html:
-    github-repo: "https://github.com/davidcarayon/inrae-report"       
+    github-repo: "https://github.com/davidcarayon/quarto-inrae-extension"       
     bg-image: https://raw.githubusercontent.com/rfortherestofus/pagedreport/master/inst/resources/img/hazelnuts-img.jpg   
 execute: 
   warning: false
